@@ -19,8 +19,7 @@ device = ClimaComms.device()
 device_suffix = device isa ClimaComms.CPUSingleThreaded ? "cpu" : "gpu"
 root_path = "land_longrun_$(device_suffix)"
 diagnostics_outdir = joinpath(root_path, "global_diagnostics")
-outdir =
-    ClimaUtilities.OutputPathGenerator.generate_output_path(diagnostics_outdir);
+outdir = ClimaUtilities.OutputPathGenerator.generate_output_path(diagnostics_outdir);
 toml_dict = LP.create_toml_dict(FT)
 
 parameter_log_file = joinpath(root_path, "parameters.toml")
