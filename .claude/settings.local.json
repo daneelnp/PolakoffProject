@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(julia --project=. src/leaf_optical_seasonal_maps.jl)",
-      "Bash(julia --project=. -e \"import Pkg; Pkg.instantiate\\(\\)\")"
+      "Bash(julia --project=. -e \"import Pkg; Pkg.instantiate\\(\\)\")",
+      "Bash(julia:*)"
     ]
   }
 }
